@@ -1,0 +1,17 @@
+%shared-mh {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+.pure-menu-horizontal {
+    width: 100%;
+    white-space: nowrap;
+    & .pure-menu-list{
+        display: inline-block;
+    }
+    & .pure-menu-item, & .pure-menu-heading, & .pure-menu-separator{
+        @extend %shared-mh;
+    }
+}
