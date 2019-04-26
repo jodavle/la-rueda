@@ -4,7 +4,7 @@
     <section class="grid-noGutter">
         <div class="menuFloatLeft">
            <div class="sidebar-1">
-            <?php 
+            <?php
                 // Setup arguments.
                 $args = array(
                     // Get a specific slider category.
@@ -17,7 +17,7 @@
 
             if ($my_query->have_posts()) :
                 while ($my_query->have_posts()) :
-                    $my_query->the_post();        
+                    $my_query->the_post();
             ?>
             <!-- Cumpliendo la condición -->
             <div class="pure-round-buttons"></div>
@@ -34,7 +34,7 @@
            </div>
         </div>
         <div class="col-12">
-        
+
         <?php
         if ($my_query->have_posts()) :
             while ($my_query->have_posts()) :
@@ -61,19 +61,15 @@
         ?>
         </div>
         <div class="pure-landing-down-button">
-            <a href="#"><img class="pure-img" src="./img/botton-landing.svg" alt=""></a>
+        <a href="#"><img class="pure-img" src="<?php echo get_template_directory_uri(); ?>/img/botton-landing.svg" alt=""></a>
         </div>
     </section>
 </div>
-<!-- 
->!--
->!--
->!--
-!-->
+<!-- End Section Jumbotron !-->
 <!-- 2 -->
 <div class="section-2">
     <section class="grid-spaceAround">
-        <div class="float-aup"><img class="pure-img" src="./img/aup.svg" alt=""></div>
+    <div class="float-aup"><img class="pure-img" src="<?php echo get_template_directory_uri(); ?>/img/aup.svg" alt=""></div>
         <div class="float-adown">
             <div class="arrow-up"></div>
             <div class="ball"></div>
@@ -122,12 +118,12 @@
             <?php $postidd = get_theme_mod('lwp_section_fp-2-link');
             if($postidd) { ?>
                 <a href="<?php echo the_permalink($postidd); ?>">
-                    <?php 
+                    <?php
                     $ogimg = wp_get_attachment_image_src( get_post_thumbnail_id( $postidd), 'large' );
                     if ( $ogimg ) {?>
                         <img class="pure-img" src="<?php echo $ogimg[0];?>" alt="">
                     <?php } else {}?>
-                    
+
                     <h2><?php echo get_the_title($postidd); ?></h2>
                     <p><?php echo get_the_excerpt($postidd); ?></p>
                 </a>
@@ -147,12 +143,12 @@
             <?php $postidd = get_theme_mod('lwp_section_fp-3-link');
             if($postidd) { ?>
                 <a href="<?php echo the_permalink($postidd); ?>">
-                    <?php 
+                    <?php
                     $ogimg = wp_get_attachment_image_src( get_post_thumbnail_id( $postidd), 'large' );
                     if ( $ogimg ) {?>
                         <img class="pure-img" src="<?php echo $ogimg[0];?>" alt="">
                     <?php } else {}?>
-                    
+
                     <h2><?php echo get_the_title($postidd); ?></h2>
                     <p><?php echo get_the_excerpt($postidd); ?></p>
                 </a>

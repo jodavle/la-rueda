@@ -1,8 +1,7 @@
     <footer class="footer grid-noGutter">
         <div class="col-2_sm-4" data-push-left="off-1_sm-4" data-push-right="off-1_sm-4">
                 <div class="footer-widget-area">
-                <a href="<?php echo get_home_url(); ?>"><img class="pure-img logo-rueda" src="
-            <?php 
+                <a href="<?php echo get_home_url(); ?>"><img class="pure-img logo-rueda" src="<?php
             $custom_logo_id = get_theme_mod( 'custom_logo' );
             $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
             if ( has_custom_logo() ) {
@@ -24,10 +23,10 @@
                     <h2 class="sub"><a href="mailto:<?php echo get_theme_mod('lwp_fp_section_3'); ?>"><?php echo get_theme_mod('lwp_fp_section_3'); ?></a></h2>
                 </div>
             <div class="col-12">
-                <?php wp_nav_menu( array( 
-                    'theme_location' => 'redes-sociales', 
-                    'container' => false, 
-                    'items_wrap' => '<ul class="min-list social-icons-list group">%3$s</ul>', ) 
+                <?php wp_nav_menu( array(
+                    'theme_location' => 'redes-sociales',
+                    'container' => false,
+                    'items_wrap' => '<ul class="min-list social-icons-list group">%3$s</ul>', )
                     ); ?>
             </div>
         </div>

@@ -563,7 +563,7 @@ form {
 }
 
 .l1 {
-    @extend %textOverlap;    
+    @extend %textOverlap;
 }
 .l2 {
     @extend %textOverlap;
@@ -571,7 +571,7 @@ form {
 
 }
 @media screen and (max-width:720px) {
-    h1, .banner-slide.banner .banner-text h1, div[class^="section-"] section h1 {font-size: 20px;}  
+    h1, .banner-slide.banner .banner-text h1, div[class^="section-"] section h1 {font-size: 20px;}
     h2 {font-size: 18px;}
     h3 {font-size: 16px;}
     h4, .section-2 p, p {font-size: 14px;line-height: 1.5;}
@@ -599,10 +599,10 @@ form {
     color: #FFF;
     font-size: 1.25rem;
   }
-  
+
   & li a:hover {opacity: .75;}
 }
-ul { 
+ul {
   & .fa-facebook{background-color: #4862a3}
   & .fa-instagram{background-color: #d8226b}
 }
