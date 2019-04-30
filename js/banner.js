@@ -193,7 +193,7 @@ var back = document.querySelector(".section-4 > .grid");
 
 var animationA = anime({
     targets: back,
-    backgroundPositionX: ['346px', '0px'],
+    backgroundPositionX: ['340px', '0px'],
     duration: 12000,
     easing: 'linear',
     loop: true,

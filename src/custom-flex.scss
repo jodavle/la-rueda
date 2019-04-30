@@ -1,5 +1,6 @@
 $headerSize: 64px;
 $headerColSize: 8.3333333%;
+
 $colorCel: #BCE4FA;
 $colorNar: #F94616;
 $colorAma: #FAF49A;
@@ -220,7 +221,7 @@ div.logo{
         left: 50%;
         transform: translateX(-50%);
         width: $headerSize * 1.5;
-        height: $headerSize;
+        height: $headerSize * 1.5;
     }
 }
 @media (min-width: 37em){
@@ -279,7 +280,7 @@ div.section-2 {
 }
 div.section-4 section{
     background-color: $colorCel;
-    background: transparent url('../img/pattern.svg') repeat 0 0;
+    background: transparent url('../img/pattern2.png') repeat 0 0;
     padding-bottom: 6rem;
 }
 .xl-button{
@@ -571,10 +572,13 @@ form {
 
 }
 @media screen and (max-width:720px) {
-    h1, .banner-slide.banner .banner-text h1, div[class^="section-"] section h1 {font-size: 20px;}
+    .banner-slide.banner .banner-text h1, div[class^="section-"] section h1 {font-size: 20px;}
     h2 {font-size: 18px;}
     h3 {font-size: 16px;}
     h4, .section-2 p, p {font-size: 14px;line-height: 1.5;}
+}
+@media screen and (max-width: 36rem){
+    .l2{display:none;}
 }
 /*.product:not(:last-child){
     border-right: solid 1px black;
@@ -636,7 +640,7 @@ ul {
 }
 
 article.post{
-    margin: 5rem auto;
+    margin:  2.5rem auto;
     max-width: 768px;
     & p.post-info{
         font-size: 0.75rem;

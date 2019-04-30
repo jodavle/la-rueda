@@ -2364,7 +2364,7 @@ div.logo {
     left: 50%;
     transform: translateX(-50%);
     width: 96px;
-    height: 64px; } }
+    height: 96px; } }
 
 @media (min-width: 37em) {
   div.logo {
@@ -2427,7 +2427,7 @@ div.section-2 {
 
 div.section-4 section {
   background-color: #BCE4FA;
-  background: transparent url("../img/pattern.svg") repeat 0 0;
+  background: transparent url("../img/pattern2.png") repeat 0 0;
   padding-bottom: 6rem; }
 
 .xl-button {
@@ -2710,7 +2710,7 @@ form {
   color: black; }
 
 @media screen and (max-width: 720px) {
-  h1, .banner-slide.banner .banner-text h1, div[class^="section-"] section h1 {
+  .banner-slide.banner .banner-text h1, div[class^="section-"] section h1 {
     font-size: 20px; }
   h2 {
     font-size: 18px; }
@@ -2719,6 +2719,10 @@ form {
   h4, .section-2 p, p {
     font-size: 14px;
     line-height: 1.5; } }
+
+@media screen and (max-width: 36rem) {
+  .l2 {
+    display: none; } }
 
 /*.product:not(:last-child){
     border-right: solid 1px black;
@@ -2782,7 +2786,7 @@ ul .fa-instagram {
   box-shadow: 5px 5px #F94616; }
 
 article.post {
-  margin: 5rem auto;
+  margin: 2.5rem auto;
   max-width: 768px; }
   article.post p.post-info {
     font-size: 0.75rem;

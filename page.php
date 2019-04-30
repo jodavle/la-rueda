@@ -6,5 +6,5 @@
         get_template_part('content');
     }   ?>
 
-</div>    
+</div>
 <?php get_footer(); ?>

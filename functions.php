@@ -3,12 +3,12 @@
     function laRueda_resource() {
         wp_enqueue_script( 'my-custom-r', get_stylesheet_directory_uri() . '/js/anime.min.js', array(), '1.0.0', true );
         wp_enqueue_style( 'customfont', get_stylesheet_directory_uri() . '/webfont/stylesheet.css' );
-        wp_enqueue_style( 'awesomefont', get_stylesheet_directory_uri() . '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' );
+        /*wp_enqueue_style( 'awesomefont', get_stylesheet_directory_uri() . '/fonts/font-awesome.css' );*/
         wp_enqueue_style( 'customstyles', get_stylesheet_directory_uri() . '/src/gridlex.css' );
         wp_enqueue_style( 'estilo', get_stylesheet_uri() );
         wp_enqueue_script( 'my-custom-s', get_stylesheet_directory_uri() . '/js/banner.js', array(), '1.0.0', true );
         wp_enqueue_script( 'my-custom-c', get_stylesheet_directory_uri() . '/js/scroll.js', array(), '1.0.0', true );
-    
+
     }
 
     add_action('wp_enqueue_scripts', 'laRueda_resource');
@@ -203,13 +203,13 @@ function break_the_title($id){
     return str_replace(' | ', '<br />', get_the_title($id));
 }
 //Thumbnail
-add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' );
 //
-//ADD LINE BREAK 
+//ADD LINE BREAK
 add_filter( 'the_title', 'custom_the_title', 10, 2 );
 
-function custom_the_title( $title, $post_id ){ 
-    $title = str_replace( '|', '<br/>', $title ); // we replace '|' by ￼'<br>': 
-    return $title; 
+function custom_the_title( $title, $post_id ){
+    $title = str_replace( '|', '<br/>', $title ); // we replace '|' by ￼'<br>':
+    return $title;
 }
 

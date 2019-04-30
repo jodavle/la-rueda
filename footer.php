@@ -24,6 +24,7 @@
                 </div>
             <div class="col-12">
                 <?php wp_nav_menu( array(
+                    'menu_class' => 'main--menu',
                     'theme_location' => 'redes-sociales',
                     'container' => false,
                     'items_wrap' => '<ul class="min-list social-icons-list group">%3$s</ul>', )
