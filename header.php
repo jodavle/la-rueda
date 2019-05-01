@@ -20,18 +20,7 @@
 			gtag('config', 'UA-117952543-2');
     </script>
         <title><?php
-            if (is_archive()) {
-                    wp_title(''); echo ' Archivo - ';
-            } elseif (is_search()) {
-                    echo 'Buscando: &quot;'.wp_specialchars($s).'&quot; - ';
-            } elseif (!(is_404()) && (is_single()) || (is_page())) {
-                    wp_title(''); echo ' - ';
-                    } elseif (is_404()) {
-    echo 'No encontrado - ';
-}
-bloginfo('name');
 
-/*
             $vartit = wp_title('|', true, 'right');
             $vartot = bloginfo('name');
             if(empty($vartit)):
@@ -40,7 +29,8 @@ bloginfo('name');
                 echo(__( 'Home', 'textdomain' ) . ' | ' . get_bloginfo( 'description' ));
             else:
                 echo($vartit . ' | ' . $vartot);
-            endif;*/ ?></title>
+            endif; ?></title>
+
     </head>
     <body>
     <!-- Boot Animation -->

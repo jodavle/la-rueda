@@ -2190,6 +2190,10 @@ h1, h2, h3, h4, h5, h6 {
 [aria-current="page"] {
   font-weight: bold; }
 
+.nf-form-wrap.ninja-forms-form-wrap {
+  width: 100%;
+  padding: 1.5rem; }
+
 div.container {
   max-width: 80em;
   margin: 0 auto;
