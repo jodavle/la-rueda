@@ -34,7 +34,7 @@ body {
 }
 h1,h2,h3,h4,h5,h6 {
     @include stanley;
-    color: #111;
+    color: $colorNar;
 }
 [aria-current="page"]{
     font-weight: bold;
@@ -198,7 +198,7 @@ header .pure-menu {
 
 }
 div[class^="section-"] section{
-    min-height:90vh;
+    min-height:85vh;
     & h1, & h2, & h3, & h4{
         color: $colorNar
     }
@@ -249,7 +249,7 @@ div.pure-landing-down-button{
 @media (max-width:720px) {
     div.pure-landing-down-button{
         position:absolute;
-        bottom: 2vh;
+        bottom: 25vh;
         right: 2vw;width:2rem;
     }
 }
@@ -362,7 +362,7 @@ div.link{
 }
 .footer .pure-img,
 .section-3 .pure-img {
-    max-width:80%;
+    max-width:100%;
     margin: 0 auto;
 }
 .section-3 section div{
@@ -552,6 +552,7 @@ form {
     }
     & .menu-item{
         display: block;
+        margin-bottom: 1rem;
     }
     & i.iconic img{
         width: $sizeIcon;
@@ -561,7 +562,7 @@ form {
         text-decoration: none;
         color: white;
         vertical-align: middle;
-        padding-bottom: $sizeIcon;
+        font-size:1.5rem;
     }
 
 }

@@ -1,5 +1,5 @@
     <footer class="footer grid-noGutter">
-        <div class="col-2_sm-4" data-push-left="off-1_sm-4" data-push-right="off-1_sm-4">
+        <div class="col-2_sm-6" data-push-left="off-1_sm-3" data-push-right="off-1_sm-3">
                 <div class="footer-widget-area">
                 <a href="<?php echo get_home_url(); ?>"><img class="pure-img logo-rueda" src="<?php
             $custom_logo_id = get_theme_mod( 'custom_logo' );
