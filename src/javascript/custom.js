@@ -1,45 +1,26 @@
-/*
--- side menu
-*/
 
-(function (window, document) {
-    var layout   = document.getElementById('layout'),
-        menu     = document.getElementById('menu'),
-        menuLink = document.getElementById('menuLink'),
-        content  = document.getElementById('main');
-    function toggleClass(element, className) {
-        var classes = element.className.split(/\s+/),
-            length = classes.length,
-            i = 0;
-        for(; i < length; i++) {
-            if (classes[i] === className) {
-                classes.splice(i, 1);
-                break;
-        }
-    }
-    // The className is not found
-    if (length === classes.length) {
-    classes.push(className);
-    }
-    element.className = classes.join(' ');
-    }
+document.addEventListener('DOMContentLoaded', () => {
 
-    function toggleAll(e) {
-        var active = 'active';
-        e.preventDefault();
-        toggleClass(layout, active);
-        toggleClass(menu, active);
-        toggleClass(menuLink, active);
-    }
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-    menuLink.onclick = function (e) {
-        toggleAll(e);
-    };
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
 
-    content.onclick = function(e) {
-        if (menu.className.indexOf('active') !== -1) {
-            toggleAll(e);
-        }
-    };
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
 
-}(this, this.document));
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});

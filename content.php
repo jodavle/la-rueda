@@ -5,7 +5,7 @@
 <img class="pure-img text-center il-center" src="<?php echo the_post_thumbnail_url();?>" style="overflow: hidden;background-size: cover;background-position: center;background-image:url('<?php echo the_post_thumbnail_url(); ?>');" />
 -->
 
-<div style="width:100%;min-height:360px;overflow: hidden;background-size: cover;background-position: center;background-image:url('<?php echo the_post_thumbnail_url(); ?>');"></div>
+<div style="width:100%;max-width:1200px;margin:0 auto;min-height:360px;overflow: hidden;background-size: cover;background-position: center;background-image:url('<?php echo the_post_thumbnail_url(); ?>');"></div>
 
         <?php
 } else {}

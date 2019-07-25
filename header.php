@@ -47,47 +47,45 @@
             <div class="triangle el"></div>
         </div>
     </div>
-    <div class="menu">
-        <div class="app-menu">
-        <?php
-            $menuParameters = array(
-            'theme_location' => 'menu',
-            'menu_class'       => 'items',
-            'container_class'   => 'items',
-            'echo'            => false,
-            'items_wrap'      => '%3$s',
-            'link_before'   =>  '<div class="menu-item"><span class="text-menu">',
-            'link_after'    =>  '</span></div>',
-            'depth'           => 0,
-            );
-            echo str_replace('<a' , '<a class="link-menu"',
-            (strip_tags(wp_nav_menu( $menuParameters ), '<div><a><span>' )));
-        ?>
-        </div>
-    </div>
 
-<div class="layout">
-    <header class="header">
-        <div class="grid-12 pure-menu pure-menu-horizontal">
-            <div class="col-12">
-            <a class="pure-menu-heading pure-menu-link" href=""></a>
-            <div class="logo"><a href="<?php echo get_home_url(); ?>"><img class="pure-img" src="
+
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+	<a class="navbar-item" href="<?php echo get_home_url(); ?>"><img src="
             <?php
             $custom_logo_id = get_theme_mod( 'custom_logo' );
             $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
             if ( has_custom_logo() ) {
                     echo esc_url( $logo[0] );
             } else {echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';}?>
-            " alt=""></a></div>
-            </div>
-            <div class="float-menu">
-                <div class="menu-icon">
-                <div></div>
-                <div></div>
-                <div></div>
-                </div>
-            </div>
-        </div>
-    </header>
+            " alt="" width="112"></a>
 
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+   <?php
+            $menuParameters = array(
+            'theme_location' => 'menu',
+            'menu_class'       => 'navbar-end',
+            'container_class'   => 'navbar-end',
+            'echo'            => false,
+            'items_wrap'      => '%3$s',
+            'link_before'   =>  '<div><span>',
+            'link_after'    =>  '</span></div>',
+            'depth'           => 0,
+            );
+            echo str_replace('<a' , '<a class="navbar-item"',
+            (strip_tags(wp_nav_menu( $menuParameters ), '<div><a><span>' )));
+        ?>
+</div>
+</nav>
+
+
+<div class="layout">
 

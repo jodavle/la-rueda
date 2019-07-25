@@ -14,16 +14,18 @@ var hide = function(elem) {
 };
 
 document.addEventListener('DOMContentLoaded', function(){
-var roundButton = document.querySelector('.sidebar-1 div:first-child');
-    if(!roundButton.classList.contains('pure-round-buttons-select')){
-        //dotnet(roundButton);
-        for(i = 0; i < dotlist.length; ++i){
-        dotlist[i].classList.remove('pure-round-buttons-select');dotlist[i].classList.add('pure-round-buttons');
-    }
-    roundButton.classList.remove('pure-round-buttons');roundButton.classList.add('pure-round-buttons-select');
-    show(document.querySelector('.section-1 a.overlay:nth-child('+currIndex+')'));
+if(document.querySelector('.sidebar-1 div:first-child')){
+    var roundButton = document.querySelector('.sidebar-1 div:first-child');
+        if(!roundButton.classList.contains('pure-round-buttons-select')){
+            //dotnet(roundButton);
+            for(i = 0; i < dotlist.length; ++i){
+            dotlist[i].classList.remove('pure-round-buttons-select');dotlist[i].classList.add('pure-round-buttons');
+        }
+        roundButton.classList.remove('pure-round-buttons');roundButton.classList.add('pure-round-buttons-select');
+        show(document.querySelector('.section-1 a.overlay:nth-child('+currIndex+')'));
 
-    };
+        };
+    } else {};
 
 var timer = function(){
     interval = setInterval(function(){
@@ -200,27 +202,8 @@ var animationA = anime({
     autoplay: true
 });
 
-function toggleClassMenu() {
-myMenu.classList.add("menu--animatable");
-    if(!myMenu.classList.contains("menu--visible")) {
-    myMenu.classList.add("menu--visible");
-    animationBl.restart();
-    } else {
-    myMenu.classList.remove("menu--visible");
-    animationBl.play();
-    animationBl.reverse();
-    }
-}
-function OnTransitionEnd() {
-myMenu.classList.remove("menu--animatable");
-}
 
-var myMenu = document.querySelector(".menu");
-var oppMenu = document.querySelector(".menu-icon");
-myMenu.addEventListener("transitionend", OnTransitionEnd, false);
-oppMenu.addEventListener("click", toggleClassMenu, false);
-myMenu.addEventListener("click", toggleClassMenu, false);
-
+if(document.querySelector('.pure-landing-down-button')){
 document.querySelector('.pure-landing-down-button').addEventListener('click', () => {
     scrollIt(document.querySelector('.section-2'), 800,'easeOutQuad', () => console.log('termine'));});
-
+} else {}
