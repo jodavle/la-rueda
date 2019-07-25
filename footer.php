@@ -1,5 +1,5 @@
     <footer class="footer grid-noGutter">
-        <div class="col-2_sm-6" data-push-left="off-1_sm-3" data-push-right="off-1_sm-3">
+        <div class="col-2_sm-4_xs-6" data-push-left="off-1_sm-4_xs-3" data-push-right="off-1_sm-2">
                 <div class="footer-widget-area">
                 <a href="<?php echo get_home_url(); ?>"><img class="pure-img logo-rueda" src="<?php
             $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -13,16 +13,16 @@
 
         </div>
         <div class="col-4_sm-12">
-            <div class="footer-widget-area">
+            <div class="footer-widget-area" style="margin-left:35px;">
                 <h2><?php echo get_theme_mod('lwp_fp_section_1'); ?></h2>
             </div>
         </div>
-        <div class="col-4_sm-12">
-                <div class="footer-widget-area">
+        <div class="col-4_sm-12 grid">
+                <div class="footer-widget-area col-12_sm-6">
                     <h2 class="sub"><a href="tel:<?php echo get_theme_mod('lwp_fp_section_2'); ?>"><?php echo get_theme_mod('lwp_fp_section_2'); ?></a></h2>
                     <h2 class="sub"><a href="mailto:<?php echo get_theme_mod('lwp_fp_section_3'); ?>"><?php echo get_theme_mod('lwp_fp_section_3'); ?></a></h2>
                 </div>
-            <div class="col-12">
+            <div class="col-12_sm-6">
                 <?php wp_nav_menu( array(
                     'menu_class' => 'main--menu',
                     'theme_location' => 'redes-sociales',

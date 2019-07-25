@@ -1,0 +1,27 @@
+{
+  "name": "la-rueda",
+  "version": "1.0.0",
+  "description": "Wordpress theme for LaRueda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jodavle/la-rueda.git"
+  },
+  "keywords": [
+    "theme",
+    "initial",
+    "test"
+  ],
+  "author": "David Lechuga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jodavle/la-rueda/issues"
+  },
+  "homepage": "https://github.com/jodavle/la-rueda#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

@@ -3,6 +3,7 @@
     Just a Flexbox Grid System - v. 2.7.1
 ========================================================================== */
 
+@import "tm-data";
 @import "gridlex-vars";
 @import "gridlex-preprocessing";
 @import "gridlex-mixins";
@@ -20,4 +21,3 @@
 @import "pure-forms";
 @import "pure-forms-r";
 @import "custom-flex";
-@import "fontawesome/font-awesome";

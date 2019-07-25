@@ -1,6 +1,5 @@
 $headerSize: 64px;
 $headerColSize: 8.3333333%;
-
 $colorCel: #BCE4FA;
 $colorNar: #F94616;
 $colorAma: #FAF49A;
@@ -15,10 +14,12 @@ $menuSize: 280px;
     }
 }
 @mixin helvetica($we) {
-    @switch $we {
-            @case 1 {font-weight: normal;}
-            @case 2 {font-weight: 500;}
-            @case 3 {font-weight: bold;}
+    @if $we == '1' {
+    	font-weight: normal;
+	} @else if $we == '2' {font-weight: 500;
+	} @else if $we == '3' {font-weight: bold;
+	} @else {
+		font-weight: normal;
         }
     font: {
         family: "Helvetica Neue LT Pro", Sans-serif !important;
@@ -83,13 +84,13 @@ header .pure-menu {
         width: 100%;
         font-size: 80%;
         text-align: right;
-        background: -moz-linear-gradient(top,  rgba(16,27,30,0) 0%, rgba(12,2,2,1) 90%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(16,27,30,0)), color-stop(90%,rgba(12,2,2,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  rgba(16,27,30,0) 0%,rgba(12,2,2,1) 90%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(16,27,30,0) 0%,rgba(12,2,2,1) 90%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(16,27,30,0) 0%,rgba(12,2,2,1) 90%); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(16,27,30,0) 0%,rgba(12,2,2,1) 90%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00101b1e', endColorstr='#0c0202',GradientType=0 ); /* IE6-9 */
+        background: -moz-linear-gradient(top,  rgba(16,27,30,0) 0%, rgba(12,2,2,1) 90%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(16,27,30,0)), color-stop(90%,rgba(12,2,2,1)));
+        background: -webkit-linear-gradient(top,  rgba(16,27,30,0) 0%,rgba(12,2,2,1) 90%);
+        background: -o-linear-gradient(top,  rgba(16,27,30,0) 0%,rgba(12,2,2,1) 90%);
+        background: -ms-linear-gradient(top,  rgba(16,27,30,0) 0%,rgba(12,2,2,1) 90%);
+        background: linear-gradient(to bottom,  rgba(16,27,30,0) 0%,rgba(12,2,2,1) 90%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00101b1e', endColorstr='#0c0202',GradientType=0 );
         & span{
             color: #aaa;
             & a {
@@ -536,7 +537,7 @@ form {
     z-index: 2;
     background-color: white;
     padding: 1rem;
-    height: 90vh;
+    height: 85vh;
     width: 60px;
 }
 .overlay{height:100%;width:100%;}
@@ -567,7 +568,7 @@ form {
 
 }
 
-%textOverlap{
+%textOverlap {
     background-color: white;
     box-shadow: 10px 0 white, -10px 0 white;
     -webkit-box-shadow: 10px 0 white, -10px 0 white;

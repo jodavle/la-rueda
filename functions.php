@@ -1,13 +1,11 @@
 <?php
 
     function laRueda_resource() {
-        wp_enqueue_script( 'my-custom-r', get_stylesheet_directory_uri() . '/js/anime.min.js', array(), '1.0.0', true );
-        wp_enqueue_style( 'customfont', get_stylesheet_directory_uri() . '/webfont/stylesheet.css' );
-        /*wp_enqueue_style( 'awesomefont', get_stylesheet_directory_uri() . '/fonts/font-awesome.css' );*/
-        wp_enqueue_style( 'customstyles', get_stylesheet_directory_uri() . '/src/gridlex.css' );
+        wp_enqueue_script( 'my-custom-r', get_stylesheet_directory_uri() . '/dist/javascript/main.min.js', array(), '1.0.0', true );
+        /*wp_enqueue_style( 'customfont', get_stylesheet_directory_uri() . '/webfont/stylesheet.css' );
+        /*wp_enqueue_style( 'awesomefont', get_stylesheet_directory_uri() . '/fonts/font-awesome.css' );
+	wp_enqueue_style( 'customstyles', get_stylesheet_directory_uri() . '/src/gridlex.css' );*/
         wp_enqueue_style( 'estilo', get_stylesheet_uri() );
-        wp_enqueue_script( 'my-custom-s', get_stylesheet_directory_uri() . '/js/banner.js', array(), '1.0.0', true );
-        wp_enqueue_script( 'my-custom-c', get_stylesheet_directory_uri() . '/js/scroll.js', array(), '1.0.0', true );
 
     }
 

@@ -1,6 +1,4 @@
-
 function scrollIt(destination, duration = 200, easing = 'linear', callback) {
-
 const easings = {
 linear(t) {
 return t;
@@ -39,7 +37,6 @@ if(window.pageYOffset === destinationOffsetToScroll) {
                   }
       return;
     }
-
     requestAnimationFrame(scroll);
   }
 

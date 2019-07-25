@@ -74,11 +74,14 @@
             <div class="arrow-up"></div>
             <div class="ball"></div>
         </div>
-        <div class="col-4_sm-10 col-top" data-push-left="off-1_sm-0">
+        <div class="col-10_sm-10 col-top" data-push-left="off-1_sm-0">
             <?php $postid = get_theme_mod('lwp_section_fp-link'); ?>
             <h1><?php echo break_the_title($postid); ?></h1>
         </div>
-        <div class="col-4_sm-10 col-bottom" data-push-right="off-1_sm-0">
+	<div class="col-2_md-5_sm-6 col-top">
+	<img class="pure-img" src="<?php echo get_template_directory_uri(); ?>/img/p-limon.png">
+        </div>
+        <div class="col-4_md-5_sm-5 col-top" data-push-right="off-0_sm-1_xs-0">
             <p>
             <?php echo get_the_excerpt($postid); ?>
             </p>
@@ -110,9 +113,6 @@
 
 <div class="section-4">
     <section class="grid">
-        <div class="col-10" data-push-left="off-1" data-push-right="off-1">
-            <h2>Productos</h2>
-        </div>
         <div class="col-5_md-10 product" data-push-left="off-1">
             <div class="article">
             <?php $postidd = get_theme_mod('lwp_section_fp-2-link');
